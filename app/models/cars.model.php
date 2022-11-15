@@ -49,12 +49,12 @@ function delete($id){
   $db = $this->getDB();
   $sentencia = $db->prepare("UPDATE autos SET vehiculos=?, forma_de_pago=?, contacto=?, categoria=?  WHERE id = ?");
   $sentencia->execute([$vehiculos, $forma_de_pago, $contacto, $categoria, $id]);
+
 }
 
 function filter(){
   $db = $this->getDB();
 
-  //SELECT `vehiculos` FROM autos;
   $sentencia = $db->prepare('SELECT vehiculos FROM autos');
   $sentencia->execute();
   $Filtercars = $sentencia->fetchAll(PDO::FETCH_OBJ);

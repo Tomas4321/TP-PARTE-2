@@ -24,11 +24,12 @@ class ApiSpecsController{
                 elseif(($_GET['order'])=="DESC"){
                     $specs = $this->model_specs->getSpecDesc();
                 }
-                else{
-                    $specs = $this->model_specs->getSpecs();
-                }
             }
         }
+        else{
+            $specs = $this->model_specs->getSpecs();
+        }
+        
         $this->view->response($specs, 200); 
     }
         

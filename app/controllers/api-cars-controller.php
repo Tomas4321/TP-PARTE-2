@@ -14,6 +14,7 @@ class apiCarsController{
     }
     
     function getAllCars($params = null){
+    //Filtro todos los autos     
         if(isset($_GET['filter'])){          
             if($_GET['filter']=='vehiculos'){
                 $this->filterCars(); 
@@ -21,12 +22,12 @@ class apiCarsController{
             else{
                 $this->view->response("Error en la peticion", 404);
             }
+            
         }
         else{
             $cars = $this->model_cars->getCars();
             $this->view->response($cars, 200);
         }
-    
     }
 
     function getOneCar($params = []){

@@ -27,6 +27,7 @@ $router->addRoute('cars/:ID', 'DELETE', 'apiCarsController', 'DeleteCars');
 
 //RUTEO TABLA DE ESPECIFICACIONES
 
+
 //TRAER TODAS LAS ESPECIFICACIONES
 $router->addRoute('specs', 'GET', 'ApiSpecsController', 'getAllSpecs');
 
