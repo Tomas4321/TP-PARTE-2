@@ -29,16 +29,16 @@ http://localhost/T.P%202%20Especial/api/specs?sort=precio&order=DESC
 
 
 METODO POST :
--Agrego un nuevo auto
 
+-Agrego un nuevo auto
 http://localhost/T.P%202%20Especial/api/cars
 
 METODO PUT :
--Edito un auto en particular
 
+-Edito un auto en particular
 http://localhost/T.P%202%20Especial/api/cars/:ID
 
 METODO DELETE :
--Elimino un auto en particular
 
+-Elimino un auto en particular
 http://localhost/T.P%202%20Especial/api/cars/:ID
