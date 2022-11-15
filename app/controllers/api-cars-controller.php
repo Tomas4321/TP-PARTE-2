@@ -65,7 +65,7 @@ class apiCarsController{
             $this->view->response($car, 200); 
     
             if(empty($body->vehiculos)|| empty($body->forma_de_pago) || empty($body->contacto) || empty($body->categoria)){
-                $this->view->response(" Faltan completar datos", 424);
+                $this->view->response(" Faltan completar datos", 404);
             }
             else{
                 $this->model_cars->edit($body->vehiculos, $body->forma_de_pago, $body->contacto, $body->categoria, $idEditcar);
